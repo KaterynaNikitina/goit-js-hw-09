@@ -1,7 +1,7 @@
 const startBtn = document.querySelector('[data-start]');
 const stopBtn = document.querySelector('[data-stop]');
 
-let intervalId = 0;
+// let intervalId = 0;
 
 
 startBtn.addEventListener('click', onStartBtnClick);
@@ -15,7 +15,7 @@ function onStartBtnClick(evt) {
   if (isStopBtnActive) {
     stopBtn.removeAttribute('disabled', '');
   }
-  
+  let intervalId = null;
   intervalId = setInterval(bodyColorChange, 1000);
 }
 
