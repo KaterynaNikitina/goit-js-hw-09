@@ -5,14 +5,14 @@ startBtn.addEventListener('click', onStartBtnClick);
 stopBtn.addEventListener('click', onStopBtnClick);
 
 function onStartBtnClick(evt) {
-  
+
   startBtn.setAttribute('disabled', '');
   const isStopBtnActive = stopBtn.hasAttribute('disabled');
 
   if (isStopBtnActive) {
     stopBtn.removeAttribute('disabled', '');
   }
-  setId = setInterval(bodyColorChange, 1000);
+  intervalId = setInterval(bodyColorChange, 1000);
 }
 
 function bodyColorChange() {
@@ -24,7 +24,7 @@ function getRandomHexColor() {
 }
 
 function onStopBtnClick(evt) {
-  clearInterval(setId);
+  clearInterval(intervalId);
   stopBtn.setAttribute('disabled', '');
   startBtn.removeAttribute('disabled', '');
 }
