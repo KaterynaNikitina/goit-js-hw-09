@@ -1,7 +1,7 @@
 const startBtn = document.querySelector('[data-start]');
 const stopBtn = document.querySelector('[data-stop]');
 
-let intervalId = null;
+let intervalId = 0;
 
 
 startBtn.addEventListener('click', onStartBtnClick);
