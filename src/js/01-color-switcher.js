@@ -7,6 +7,8 @@ stopBtn.addEventListener('click', onStopBtnClick);
 
 function onStartBtnClick(evt) {
 
+  intervalId = setInterval(bodyColorChange, 1000);
+
   startBtn.setAttribute('disabled', '');
   isStopBtnActive = stopBtn.hasAttribute('disabled');
 
@@ -14,7 +16,6 @@ function onStartBtnClick(evt) {
     stopBtn.removeAttribute('disabled', '');
   }
   
-  intervalId = setInterval(bodyColorChange, 1000);
 }
 
 function bodyColorChange() {
