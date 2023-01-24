@@ -12,7 +12,7 @@ function onStartBtnClick(evt) {
   if (isStopBtnActive) {
     stopBtn.removeAttribute('disabled', '');
   }
-  intervalId = setInterval(bodyColorChange, 1000);
+  const intervalId = setInterval(bodyColorChange, 1000);
 }
 
 function bodyColorChange() {
@@ -27,4 +27,5 @@ function onStopBtnClick(evt) {
   clearInterval(intervalId);
   stopBtn.setAttribute('disabled', '');
   startBtn.removeAttribute('disabled', '');
+  
 }
