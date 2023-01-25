@@ -10,7 +10,7 @@ function onStartBtnClick(evt) {
   intervalId = setInterval(bodyColorChange, 1000);
 
   startBtn.setAttribute('disabled', '');
-  isStopBtnActive = stopBtn.hasAttribute('disabled');
+  const isStopBtnActive = stopBtn.hasAttribute('disabled');
 
   if (isStopBtnActive) {
     stopBtn.removeAttribute('disabled', '');
